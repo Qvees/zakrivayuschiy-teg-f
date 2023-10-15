@@ -15,6 +15,318 @@
 */
 
 .page {
+  display: grid;
+  place-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  /* Градиент с повторяющимися полосками слева направо */
+  background-image: repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a);
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.header-container {
+  width: 696px;
+  height: 364px;
+  border: 2px solid black;
+  background-color: white;
+  text-align: center;
+  margin-top: 102px;
+}
+
+.header-logo {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  font-family: "PressStart";
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 136px;
+}
+
+.header-text {
+  font-family: "PressStart";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: grid;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 22px;
+}
+
+.theme-menu__button {
+  display: block;
+  padding-left: 20px;
+  border: none;
+  background-color: transparent;
+  font-family: "PressStart";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative; 
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button::before {
+  content: "➤";
+  display: block;
+  width: 0;
+  height: 0;
+  color: #000;
+  position: absolute;
+  left: -20px; /* Смещаем псевдоэлемент за границы кнопки */
+  opacity: 0; /* Начальная непрозрачность */
+  animation: arrowAnimation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4px);
+  }
+}
+
+
+
+/* Псевдоэлемент в состоянии disabled */
+.theme-menu__button[disabled]::before {
+  opacity: 1; /* Стрелочка видима, даже в состоянии disabled */
+  pointer-events: none; /* Отключаем взаимодействие с псевдоэлементом в состоянии disabled */
+}
+
+/* Для кнопки "Auto" */
+.theme-menu__button[data-theme="auto"]::before {
+  left: -20px; /* Смещаем стрелочку для кнопки "Auto" */
+}
+
+/* Для кнопки "Dark" */
+.theme-menu__button[data-theme="dark"]::before {
+  left: -20px; /* Смещаем стрелочку для кнопки "Dark" */
+}
+
+/* Для кнопки "Light" */
+.theme-menu__button[data-theme="light"]::before {
+  left: -20px; /* Смещаем стрелочку для кнопки "Light" */
+}
+
+
+
+
+
+
+
+
+.main-container {
+  display: grid;
+  margin-top: 103px;
+
+}
+.card {
+  width: 696px;
+  background-color: white;
+  border: 2px solid black;
+  margin-bottom: 50px;
+}
+.card-title {
+  color: #000;
+  font-family: "Inter-Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 5px 10px;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  max-width: 100%;
+  height: 696px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.image2 {
+  height: 696px;
+  filter: saturate(0.3);
+}
+
+.image3 {
+  height: 696px;
+  filter: saturate(4);
+}
+
+.image4 {
+  height: 696px;
+  filter: hue-rotate(25deg);
+}
+
+
+.image5 {
+  height: 100%;
+  filter: invert(0.8);
+}
+
+.image6 {
+  height: 696px;
+  filter: sepia(0.9);
+}
+
+.card-text-container {
+  display: grid;
+  gap: 27px;
+  margin: 27px 25px 0 25px;
+  width: 646px;
+}
+
+.image-text {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  background-color: transparent;
+  padding: 5px 10px;
+  color: #000;
+  font-family: "PressStart";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  text-stroke: 1px rgba(255, 255, 255, 0.7);
+  mix-blend-mode: hard-light;
+}
+
+.span-lowercase{
+  text-transform: lowercase;
+}
+
+/* Фоллбэк для браузеров без поддержки mix-blend-mode */
+@supports (mix-blend-mode: hard-light) {
+  .image-text {
+    mix-blend-mode: hard-light;
+  }
+}
+
+.card-text {
+  color: #000;
+  font-family: "Inter-Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 116.667% */
+}
+
+.card-button {
+  width: 169px;
+  height: 38px;
+  background-color: transparent;
+  border: 2px solid #000;
+  margin: 25px 25px 25px 0;
+  float: right;
+  color: #000;
+  font-family: "PressStart";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  cursor: pointer;
+}
+
+.footer-button {
+  width: 335px;
+  height: 51px;
+  background-color: white;
+  border: 2px solid #000;
+  margin: 0px 0 105px 0;
+  color: #000;
+  font-family: "PressStart";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+}
+
+#dialog-id {
+  width: 357px;
+  height: 197px;
+  border: 2px solid #000;
+}
+
+#dialog-id[open]::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-button {
+  width: 293px;
+  height: 38px;
+  color: #000;
+  font-family: "PressStart";
+  background-color: transparent;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  text-transform: uppercase;
+  margin: 30px 0 0 0;
+  cursor: pointer;
+}
+
+.modal-text {
+  color: #000;
+  font-family: "PressStart";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 90.5px;
+  margin-top: 31.5px;
 }
