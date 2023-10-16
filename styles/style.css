@@ -277,6 +277,76 @@
   line-height: 21px; /* 116.667% */
 }
 
+.heart-button{
+background-color: transparent;
+border:none;
+width: 40px;
+height: 35px;
+margin-left: 497px;
+margin-top: 27px;
+position: relative;
+cursor: pointer;
+}
+
+.card-heart{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.heart-button:focus{
+  outline:  none;
+}
+
+.heart-button:focus-visible{
+  outline: 2px solid #000;
+  transition: 0.3s ease;
+}
+
+/*анимация сердца*/
+.sparks{
+  opacity: 0;
+}
+
+.core {
+  fill: #fff; /* Начальный цвет сердцевины */
+  transition: fill 0.2s linear 0.1s; /* Анимация изменения fill с задержкой 0.3s при наведении */
+}
+
+.main-body {
+  fill: #fff; 
+  transition: fill 0.3s linear 0.1s; /* Анимация изменения fill с задержкой 0.33s при наведении */
+}
+
+.heart-button:hover .core {
+  fill: #000; /* Новый цвет сердцевины при наведении */
+  transition-delay: 0.1s; /* Задержка для анимации при уходе курсора */
+}
+
+.heart-button:hover .main-body {
+  fill: #000; /* Новый цвет основного тела при наведении */
+  transition-delay: 0.2s;
+}
+
+
+
+.heart-button:active .core {
+  fill: #ff0000; /* Новый цвет сердцевины при наведении */
+  transition-delay: 0.1s; 
+}
+
+.heart-button:active .main-body {
+  fill: #ff0000; /* Новый цвет основного тела при наведении */
+  transition-delay: 0.1s;
+}
+
+
+
+
+
+
+
 .card-button {
   position: relative;
   overflow: hidden;
@@ -302,7 +372,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-transform: uppercase;
   white-space: nowrap;
   transition: color 0.5s ease-in-out;
 }
@@ -339,6 +408,10 @@
 }
 
 .footer-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   width: 338px;
@@ -350,9 +423,13 @@
   padding-left: 30px;
   transition: color 0.5s ease-in-out;
 }
+.diskette-footer{
+  margin-left: 5px;
+}
 
 .footer-button-lowercase{
   text-transform: none; /*убрал uppercase*/
+  margin-right: 20px;
 }
 
 
@@ -379,7 +456,7 @@
 
 #dialog-id {
   width: 357px;
-  height: 197px;
+  height: 173px;
   border: 2px solid #000;
 }
 
@@ -393,10 +470,20 @@
   justify-content: center;
 }
 
+.diskette-text-container{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-left:10px;
+}
+
 .cancel-button {
   width: 293px;
   height: 38px;
   color: #000;
+  grid-column: 1/3;
   font-family: "PressStart";
   background-color: transparent;
   font-size: 14px;
@@ -404,7 +491,7 @@
   font-weight: 400;
   line-height: 90%; /* 12.6px */
   text-transform: uppercase;
-  margin: 30px 0 0 0;
+  margin: 30px 0 0 10px;
   cursor: pointer;
 }
 
@@ -417,6 +504,4 @@
   line-height: 150%; /* 21px */
   text-transform: uppercase;
   text-align: left;
-  margin-left: 90.5px;
-  margin-top: 31.5px;
 }

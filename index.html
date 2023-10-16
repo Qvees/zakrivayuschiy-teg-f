@@ -1,193 +1,379 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
-    <script src="./scripts/set-theme.js"></script>
-  </head>
-  <body class="page">
-    <header class="header">
-      <div class="header-container">
-        <div class="header-logo">
-          <h1 class="header-title">&lt;/html&gt;</h1>
-          <p class="header-text">закрывающий тег</p>
-        </div>
-        <nav class="theme-menu header__theme-menu">
-          <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-          <ul class="theme-menu__list">
-            <li class="theme-menu__item">
-              <button
-                type="button"
-                data-theme="dark"
-                class="theme-menu__button"
-              >
-                Темно
-              </button>
-            </li>
-            <li class="theme-menu__item">
-              <button
-                type="button"
-                data-theme="auto"
-                disabled
-                class="theme-menu__button"
-              >
-                Авто
-              </button>
-            </li>
-            <li class="theme-menu__item">
-              <button
-                type="button"
-                data-theme="light"
-                class="theme-menu__button"
-              >
-                Светло
-              </button>
-            </li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <link rel="stylesheet" href="./styles/themes.css" />
+  <script src="./scripts/set-theme.js"></script>
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header-container">
+      <div class="header-logo">
+        <h1 class="header-title">&lt;/html&gt;</h1>
+        <p class="header-text">закрывающий тег</p>
       </div>
-    </header>
-    <main class="main-container">
-      <div class="card">
-        <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-        <div class="image-container">
+      <nav class="theme-menu header__theme-menu">
+        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+        <ul class="theme-menu__list">
+          <li class="theme-menu__item">
+            <button type="button" data-theme="dark" class="theme-menu__button">
+              Темно
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button type="button" data-theme="auto" disabled class="theme-menu__button">
+              Авто
+            </button>
+          </li>
+          <li class="theme-menu__item">
+            <button type="button" data-theme="light" class="theme-menu__button">
+              Светло
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main-container">
+    <div class="card">
+      <h2 class="card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+      <div class="image-container">
         <img class="card-image image1" src="./images/image.png" alt="" />
         <span class="image-text">&lt;/html&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+      <div class="card-text-container">
+        <p class="card-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на
+          учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
         <p class="card-text">Место для ваших воспоминаний о начале обучения.</p>
       </div>
-        <button class="card-button">
-          <span class="button-text">Like</span>
-        </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">1 спринт: Я — чистый лист</h2>
-        <div class="image-container">
+      <button class="heart-button">
+        <svg class="card-heart like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none" >
+              <g class="heart">
+              <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
+              <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+              <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
+              </g>
+              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
+        </svg>
+    </button>
+      <button class="card-button">
+        <span class="button-text">Like</span>
+      </button>
+    </div>
+    <div class="card">
+      <h2 class="card-title">1 спринт: Я — чистый лист</h2>
+      <div class="image-container">
         <img class="card-image image2" src="./images/image.png" alt="" />
         <span class="image-text">&lt;/html&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?</p>
+      <div class="card-text-container">
+        <p class="card-text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички.
+          Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за
+          этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не
+          справлюсь?</p>
         <p class="card-text">Место для ваших воспоминаний о начале первого спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">1 спринт: А если не получится?</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">1 спринт: А если не получится?</h2>
+      <div class="image-container">
         <img class="card-image image3" src="./images/image.png" alt="" />
         <span class="image-text">&lt;css&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
+      <div class="card-text-container">
+        <p class="card-text">Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и
+          смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.</p>
         <p class="card-text">Место для ваших воспоминаний об окончании первого спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
+      <div class="image-container">
         <img class="card-image image4" src="./images/image.png" alt="" />
         <span class="image-text span-lowercase">&lt;desigions&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.</p>
+      <div class="card-text-container">
+        <p class="card-text">На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё
+          впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не
+          подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.</p>
         <p class="card-text">Место для ваших воспоминаний о начале второго спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
+      <div class="image-container">
         <img class="card-image image5" src="./images/image.png" alt="" />
         <span class="image-text span-lowercase">care</span>
-        </div>
-        <div class="card-text-container">
-        <p class="card-text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?</p>
+      </div>
+      <div class="card-text-container">
+        <p class="card-text">Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против
+          целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно
+          пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть
+          единомышленники, не правда ли?</p>
         <p class="card-text">Место для ваших воспоминаний об окончании второго спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">3 спринт: Обходные стратегии</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">3 спринт: Обходные стратегии</h2>
+      <div class="image-container">
         <img class="card-image image6" src="./images/image.png" alt="" />
         <span class="image-text span-lowercase">&lt;support&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
+      <div class="card-text-container">
+        <p class="card-text">На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться,
+          что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.</p>
         <p class="card-text">Место для ваших воспоминаний о начале третьего спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
+      <div class="image-container">
         <img class="card-image image7" src="./images/image7.png" alt="" />
         <span class="image-text span-lowercase">&lt;/lifes-style: none&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.</p>
+      <div class="card-text-container">
+        <p class="card-text">Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и
+          проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В
+          такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.</p>
         <p class="card-text">Место для ваших воспоминаний об окончании третьего спринта.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-      <div class="card">
-        <h2 class="card-title">«Сейчас я здесь»</h2>
-        <div class="image-container">
+    </div>
+    <div class="card">
+      <h2 class="card-title">«Сейчас я здесь»</h2>
+      <div class="image-container">
         <img class="card-image image8" src="./images/image8.png" alt="" />
         <span class="image-text span-lowercase">&lt;/experience&gt;</span>
       </div>
-        <div class="card-text-container">
-        <p class="card-text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.</p>
+      <div class="card-text-container">
+        <p class="card-text">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё
+          много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый
+          мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам
+          процесс познания. Ведь часто путь — и есть результат.</p>
         <p class="card-text">Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.</p>
       </div>
       <button class="card-button">
         <span class="button-text">Like</span>
       </button>
-      </div>
-    </main>
-    <footer>
-      <dialog id="dialog-id">
-        <div class="modal-content">
+    </div>
+  </main>
+  <footer>
+    <dialog id="dialog-id">
+      <div class="modal-content">
+        <div class="diskette-text-container">
+          <svg class="diskette-modal" width="40" height="40" viewBox="0 0 40 40">
+            <use href="#diskette-modal">
+          </svg>
           <h2 class="modal-text">Вставьте <br> дискету, чтобы <br>продолжить</h2>
-          <button class="cancel-button" onclick="window['dialog-id'].close()">Ок</button>
         </div>
-      </dialog>
-      <button
-        type="button" 
-        onclick="window['dialog-id'].showModal()" 
-        aria-controls="dialog-id"
-        class="footer-button"
-      >
-        <span class="button-text footer-button-lowercase">Сохранить на память</span>
-      </button>
-      
-      
-      
-    </footer>
-    <script src="./scripts/like.js"></script>
-  </body>
+        <button class="cancel-button" onclick="window['dialog-id'].close()">Ок</button>
+      </div>
+    </dialog>
+    <button type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id" class="footer-button">
+      <svg class="diskette-footer" width="21" height="21" viewBox="0 0 21 21">
+        <use href="#diskette">
+      </svg>
+      <span class="button-text footer-button-lowercase">Сохранить на память</span>
+    </button>
+  </footer>
+  <script src="./scripts/like.js"></script>
+</body>
 </html>
+  
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="diskette" fill="none">
+  <rect width="1.61538" height="1.61538" fill="black"/>
+  <rect y="1.61523" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="3.23096" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="4.84619" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="6.46143" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="8.07715" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="9.69238" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="11.3076" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="12.9229" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="14.5386" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="16.1538" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="17.769" width="1.61538" height="1.61538" fill="black"/>
+  <rect y="19.3848" width="1.61538" height="1.61538" fill="black"/>
+  <rect x="17.7693" width="1.61538" height="1.61538" transform="rotate(90 17.7693 0)" fill="black"/>
+  <rect x="16.1538" width="1.61538" height="1.61538" transform="rotate(90 16.1538 0)" fill="black"/>
+  <rect x="14.5385" width="1.61538" height="1.61538" transform="rotate(90 14.5385 0)" fill="black"/>
+  <rect x="12.9231" width="1.61538" height="1.61538" transform="rotate(90 12.9231 0)" fill="black"/>
+  <rect x="11.3077" width="1.61538" height="1.61538" transform="rotate(90 11.3077 0)" fill="black"/>
+  <rect x="9.69226" width="1.61538" height="1.61538" transform="rotate(90 9.69226 0)" fill="black"/>
+  <rect x="8.0769" width="1.61538" height="1.61538" transform="rotate(90 8.0769 0)" fill="black"/>
+  <rect x="6.46155" width="1.61538" height="1.61538" transform="rotate(90 6.46155 0)" fill="black"/>
+  <rect x="4.84619" width="1.61538" height="1.61538" transform="rotate(90 4.84619 0)" fill="black"/>
+  <rect x="3.23071" width="1.61538" height="1.61538" transform="rotate(90 3.23071 0)" fill="black"/>
+  <rect x="19.3846" y="1.61523" width="1.61538" height="1.61538" transform="rotate(90 19.3846 1.61523)" fill="black"/>
+  <rect x="4.84619" y="3.23096" width="1.61538" height="1.61538" transform="rotate(90 4.84619 3.23096)" fill="black"/>
+  <rect x="4.84619" y="1.61523" width="1.61538" height="1.61538" transform="rotate(90 4.84619 1.61523)" fill="black"/>
+  <rect x="4.84619" y="4.84619" width="1.61538" height="1.61538" transform="rotate(90 4.84619 4.84619)" fill="black"/>
+  <rect x="16.1538" y="3.23096" width="1.61538" height="1.61538" transform="rotate(90 16.1538 3.23096)" fill="black"/>
+  <rect x="16.1538" y="1.61523" width="1.61538" height="1.61538" transform="rotate(90 16.1538 1.61523)" fill="black"/>
+  <rect x="16.1538" y="4.84619" width="1.61538" height="1.61538" transform="rotate(90 16.1538 4.84619)" fill="black"/>
+  <rect x="12.9231" y="3.23096" width="1.61538" height="1.61538" transform="rotate(90 12.9231 3.23096)" fill="black"/>
+  <rect x="12.9231" y="1.61523" width="1.61538" height="1.61538" transform="rotate(90 12.9231 1.61523)" fill="black"/>
+  <rect x="12.9231" y="4.84619" width="1.61538" height="1.61538" transform="rotate(90 12.9231 4.84619)" fill="black"/>
+  <rect x="16.1538" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 16.1538 6.46143)" fill="black"/>
+  <rect x="14.5385" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 14.5385 6.46143)" fill="black"/>
+  <rect x="12.9231" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 12.9231 6.46143)" fill="black"/>
+  <rect x="11.3077" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 11.3077 6.46143)" fill="black"/>
+  <rect x="9.69226" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 9.69226 6.46143)" fill="black"/>
+  <rect x="8.0769" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 8.0769 6.46143)" fill="black"/>
+  <rect x="6.46155" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 6.46155 6.46143)" fill="black"/>
+  <rect x="4.84619" y="6.46143" width="1.61538" height="1.61538" transform="rotate(90 4.84619 6.46143)" fill="black"/>
+  <rect x="17.7693" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 17.7693 11.3076)" fill="black"/>
+  <rect x="16.1538" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 16.1538 11.3076)" fill="black"/>
+  <rect x="14.5385" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 14.5385 11.3076)" fill="black"/>
+  <rect x="12.9231" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 12.9231 11.3076)" fill="black"/>
+  <rect x="11.3077" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 11.3077 11.3076)" fill="black"/>
+  <rect x="9.69226" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 9.69226 11.3076)" fill="black"/>
+  <rect x="8.0769" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 8.0769 11.3076)" fill="black"/>
+  <rect x="6.46155" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 6.46155 11.3076)" fill="black"/>
+  <rect x="4.84619" y="11.3076" width="1.61538" height="1.61538" transform="rotate(90 4.84619 11.3076)" fill="black"/>
+  <rect x="17.7693" y="12.9229" width="1.61538" height="1.61538" transform="rotate(90 17.7693 12.9229)" fill="black"/>
+  <rect x="4.84619" y="12.9229" width="1.61538" height="1.61538" transform="rotate(90 4.84619 12.9229)" fill="black"/>
+  <rect x="17.7693" y="14.5386" width="1.61538" height="1.61538" transform="rotate(90 17.7693 14.5386)" fill="black"/>
+  <rect x="4.84619" y="14.5386" width="1.61538" height="1.61538" transform="rotate(90 4.84619 14.5386)" fill="black"/>
+  <rect x="17.7693" y="16.1538" width="1.61538" height="1.61538" transform="rotate(90 17.7693 16.1538)" fill="black"/>
+  <rect x="4.84619" y="16.1538" width="1.61538" height="1.61538" transform="rotate(90 4.84619 16.1538)" fill="black"/>
+  <rect x="4.84619" y="17.769" width="1.61538" height="1.61538" transform="rotate(90 4.84619 17.769)" fill="black"/>
+  <rect x="17.7693" y="17.769" width="1.61538" height="1.61538" transform="rotate(90 17.7693 17.769)" fill="black"/>
+  <rect x="19.3846" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 19.3846 19.3848)" fill="black"/>
+  <rect x="17.7693" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 17.7693 19.3848)" fill="black"/>
+  <rect x="16.1538" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 16.1538 19.3848)" fill="black"/>
+  <rect x="14.5385" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 14.5385 19.3848)" fill="black"/>
+  <rect x="12.9231" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 12.9231 19.3848)" fill="black"/>
+  <rect x="11.3077" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 11.3077 19.3848)" fill="black"/>
+  <rect x="9.69226" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 9.69226 19.3848)" fill="black"/>
+  <rect x="8.0769" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 8.0769 19.3848)" fill="black"/>
+  <rect x="6.46155" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 6.46155 19.3848)" fill="black"/>
+  <rect x="4.84619" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 4.84619 19.3848)" fill="black"/>
+  <rect x="3.23071" y="19.3848" width="1.61538" height="1.61538" transform="rotate(90 3.23071 19.3848)" fill="black"/>
+  <rect x="21" y="21" width="1.61538" height="1.61538" transform="rotate(-180 21 21)" fill="black"/>
+  <rect x="21" y="19.3848" width="1.61538" height="1.61538" transform="rotate(-180 21 19.3848)" fill="black"/>
+  <rect x="21" y="17.769" width="1.61538" height="1.61538" transform="rotate(-180 21 17.769)" fill="black"/>
+  <rect x="21" y="16.1538" width="1.61538" height="1.61538" transform="rotate(-180 21 16.1538)" fill="black"/>
+  <rect x="21" y="14.5386" width="1.61538" height="1.61538" transform="rotate(-180 21 14.5386)" fill="black"/>
+  <rect x="21" y="12.9229" width="1.61538" height="1.61538" transform="rotate(-180 21 12.9229)" fill="black"/>
+  <rect x="21" y="11.3076" width="1.61538" height="1.61538" transform="rotate(-180 21 11.3076)" fill="black"/>
+  <rect x="21" y="9.69238" width="1.61538" height="1.61538" transform="rotate(-180 21 9.69238)" fill="black"/>
+  <rect x="21" y="8.07715" width="1.61538" height="1.61538" transform="rotate(-180 21 8.07715)" fill="black"/>
+  <rect x="21" y="6.46143" width="1.61538" height="1.61538" transform="rotate(-180 21 6.46143)" fill="black"/>
+  <rect x="21" y="4.84619" width="1.61538" height="1.61538" transform="rotate(-180 21 4.84619)" fill="black"/>
+  </symbol>
+</svg>
+
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol  id="diskette-modal"  fill="none">
+  <rect x="0.5" y="0.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="3.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="6.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="9.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="12.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="15.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="18.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="21.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="24.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="27.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="30.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="33.5" width="3" height="3" fill="black"/>
+  <rect x="0.5" y="36.5" width="3" height="3" fill="black"/>
+  <rect x="33.5" y="0.5" width="3" height="3" transform="rotate(90 33.5 0.5)" fill="black"/>
+  <rect x="30.5" y="0.5" width="3" height="3" transform="rotate(90 30.5 0.5)" fill="black"/>
+  <rect x="27.5" y="0.5" width="3" height="3" transform="rotate(90 27.5 0.5)" fill="black"/>
+  <rect x="24.5" y="0.5" width="3" height="3" transform="rotate(90 24.5 0.5)" fill="black"/>
+  <rect x="21.5" y="0.5" width="3" height="3" transform="rotate(90 21.5 0.5)" fill="black"/>
+  <rect x="18.5" y="0.5" width="3" height="3" transform="rotate(90 18.5 0.5)" fill="black"/>
+  <rect x="15.5" y="0.5" width="3" height="3" transform="rotate(90 15.5 0.5)" fill="black"/>
+  <rect x="12.5" y="0.5" width="3" height="3" transform="rotate(90 12.5 0.5)" fill="black"/>
+  <rect x="9.5" y="0.5" width="3" height="3" transform="rotate(90 9.5 0.5)" fill="black"/>
+  <rect x="6.5" y="0.5" width="3" height="3" transform="rotate(90 6.5 0.5)" fill="black"/>
+  <rect x="36.5" y="3.5" width="3" height="3" transform="rotate(90 36.5 3.5)" fill="black"/>
+  <rect x="9.5" y="6.5" width="3" height="3" transform="rotate(90 9.5 6.5)" fill="black"/>
+  <rect x="9.5" y="3.5" width="3" height="3" transform="rotate(90 9.5 3.5)" fill="black"/>
+  <rect x="9.5" y="9.5" width="3" height="3" transform="rotate(90 9.5 9.5)" fill="black"/>
+  <rect x="30.5" y="6.5" width="3" height="3" transform="rotate(90 30.5 6.5)" fill="black"/>
+  <rect x="30.5" y="3.5" width="3" height="3" transform="rotate(90 30.5 3.5)" fill="black"/>
+  <rect x="30.5" y="9.5" width="3" height="3" transform="rotate(90 30.5 9.5)" fill="black"/>
+  <rect x="24.5" y="6.5" width="3" height="3" transform="rotate(90 24.5 6.5)" fill="black"/>
+  <rect x="24.5" y="3.5" width="3" height="3" transform="rotate(90 24.5 3.5)" fill="black"/>
+  <rect x="24.5" y="9.5" width="3" height="3" transform="rotate(90 24.5 9.5)" fill="black"/>
+  <rect x="30.5" y="12.5" width="3" height="3" transform="rotate(90 30.5 12.5)" fill="black"/>
+  <rect x="27.5" y="12.5" width="3" height="3" transform="rotate(90 27.5 12.5)" fill="black"/>
+  <rect x="24.5" y="12.5" width="3" height="3" transform="rotate(90 24.5 12.5)" fill="black"/>
+  <rect x="21.5" y="12.5" width="3" height="3" transform="rotate(90 21.5 12.5)" fill="black"/>
+  <rect x="18.5" y="12.5" width="3" height="3" transform="rotate(90 18.5 12.5)" fill="black"/>
+  <rect x="15.5" y="12.5" width="3" height="3" transform="rotate(90 15.5 12.5)" fill="black"/>
+  <rect x="12.5" y="12.5" width="3" height="3" transform="rotate(90 12.5 12.5)" fill="black"/>
+  <rect x="9.5" y="12.5" width="3" height="3" transform="rotate(90 9.5 12.5)" fill="black"/>
+  <rect x="33.5" y="21.5" width="3" height="3" transform="rotate(90 33.5 21.5)" fill="black"/>
+  <rect x="30.5" y="21.5" width="3" height="3" transform="rotate(90 30.5 21.5)" fill="black"/>
+  <rect x="27.5" y="21.5" width="3" height="3" transform="rotate(90 27.5 21.5)" fill="black"/>
+  <rect x="24.5" y="21.5" width="3" height="3" transform="rotate(90 24.5 21.5)" fill="black"/>
+  <rect x="21.5" y="21.5" width="3" height="3" transform="rotate(90 21.5 21.5)" fill="black"/>
+  <rect x="18.5" y="21.5" width="3" height="3" transform="rotate(90 18.5 21.5)" fill="black"/>
+  <rect x="15.5" y="21.5" width="3" height="3" transform="rotate(90 15.5 21.5)" fill="black"/>
+  <rect x="12.5" y="21.5" width="3" height="3" transform="rotate(90 12.5 21.5)" fill="black"/>
+  <rect x="9.5" y="21.5" width="3" height="3" transform="rotate(90 9.5 21.5)" fill="black"/>
+  <rect x="33.5" y="24.5" width="3" height="3" transform="rotate(90 33.5 24.5)" fill="black"/>
+  <rect x="9.5" y="24.5" width="3" height="3" transform="rotate(90 9.5 24.5)" fill="black"/>
+  <rect x="33.5" y="27.5" width="3" height="3" transform="rotate(90 33.5 27.5)" fill="black"/>
+  <rect x="9.5" y="27.5" width="3" height="3" transform="rotate(90 9.5 27.5)" fill="black"/>
+  <rect x="33.5" y="30.5" width="3" height="3" transform="rotate(90 33.5 30.5)" fill="black"/>
+  <rect x="9.5" y="30.5" width="3" height="3" transform="rotate(90 9.5 30.5)" fill="black"/>
+  <rect x="9.5" y="33.5" width="3" height="3" transform="rotate(90 9.5 33.5)" fill="black"/>
+  <rect x="33.5" y="33.5" width="3" height="3" transform="rotate(90 33.5 33.5)" fill="black"/>
+  <rect x="36.5" y="36.5" width="3" height="3" transform="rotate(90 36.5 36.5)" fill="black"/>
+  <rect x="33.5" y="36.5" width="3" height="3" transform="rotate(90 33.5 36.5)" fill="black"/>
+  <rect x="30.5" y="36.5" width="3" height="3" transform="rotate(90 30.5 36.5)" fill="black"/>
+  <rect x="27.5" y="36.5" width="3" height="3" transform="rotate(90 27.5 36.5)" fill="black"/>
+  <rect x="24.5" y="36.5" width="3" height="3" transform="rotate(90 24.5 36.5)" fill="black"/>
+  <rect x="21.5" y="36.5" width="3" height="3" transform="rotate(90 21.5 36.5)" fill="black"/>
+  <rect x="18.5" y="36.5" width="3" height="3" transform="rotate(90 18.5 36.5)" fill="black"/>
+  <rect x="15.5" y="36.5" width="3" height="3" transform="rotate(90 15.5 36.5)" fill="black"/>
+  <rect x="12.5" y="36.5" width="3" height="3" transform="rotate(90 12.5 36.5)" fill="black"/>
+  <rect x="9.5" y="36.5" width="3" height="3" transform="rotate(90 9.5 36.5)" fill="black"/>
+  <rect x="6.5" y="36.5" width="3" height="3" transform="rotate(90 6.5 36.5)" fill="black"/>
+  <rect x="39.5" y="39.5" width="3" height="3" transform="rotate(-180 39.5 39.5)" fill="black"/>
+  <rect x="39.5" y="36.5" width="3" height="3" transform="rotate(-180 39.5 36.5)" fill="black"/>
+  <rect x="39.5" y="33.5" width="3" height="3" transform="rotate(-180 39.5 33.5)" fill="black"/>
+  <rect x="39.5" y="30.5" width="3" height="3" transform="rotate(-180 39.5 30.5)" fill="black"/>
+  <rect x="39.5" y="27.5" width="3" height="3" transform="rotate(-180 39.5 27.5)" fill="black"/>
+  <rect x="39.5" y="24.5" width="3" height="3" transform="rotate(-180 39.5 24.5)" fill="black"/>
+  <rect x="39.5" y="21.5" width="3" height="3" transform="rotate(-180 39.5 21.5)" fill="black"/>
+  <rect x="39.5" y="18.5" width="3" height="3" transform="rotate(-180 39.5 18.5)" fill="black"/>
+  <rect x="39.5" y="15.5" width="3" height="3" transform="rotate(-180 39.5 15.5)" fill="black"/>
+  <rect x="39.5" y="12.5" width="3" height="3" transform="rotate(-180 39.5 12.5)" fill="black"/>
+  <rect x="39.5" y="9.5" width="3" height="3" transform="rotate(-180 39.5 9.5)" fill="black"/>
+  </symbol>
+</svg>
