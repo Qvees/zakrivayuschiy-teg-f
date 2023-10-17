@@ -1,0 +1,119 @@
+/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+*/
+
+/*анимация стрелочек в шапке */
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4px);
+  }
+}
+
+/*анимация сердца*/
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  fill: #fff; /* Начальный цвет сердцевины */
+  transition: fill 0.2s linear 0.1s; /* Анимация изменения fill с задержкой 0.3s при наведении */
+}
+
+.main-body {
+  fill: #fff;
+  transition: fill 0.3s linear 0.1s; /* Анимация изменения fill с задержкой 0.33s при наведении */
+}
+
+.heart-button:hover .core {
+  fill: #000; /* Новый цвет сердцевины при наведении */
+  transition-delay: 0.1s; /* Задержка для анимации при уходе курсора */
+}
+
+.heart-button:hover .main-body {
+  fill: #000; /* Новый цвет основного тела при наведении */
+  transition-delay: 0.2s;
+}
+
+.heart-button:active .core {
+  fill: #ff0000; /* Новый цвет сердцевины при наведении */
+  transition-delay: 0.1s;
+}
+
+.heart-button:active .main-body {
+  fill: #ff0000; /* Новый цвет основного тела при наведении */
+  transition-delay: 0.1s;
+}
+/*анимация по клику на сердце*/
+.like-icon.is-liked .core {
+  fill: #ff0000;
+  animation: fillCore 0.8s ease 0.3s forwards;
+}
+
+.like-icon.is-liked .main-body {
+  fill: #ff0000;
+  animation: fillMainBody 0.8s ease 0.3s forwards;
+}
+
+.like-icon.is-liked .contour {
+  fill: #ff0000;
+  animation: fillContour 0.8s ease 0.3s forwards;
+}
+
+.like-icon.is-liked {
+  animation: scaleHeart 0.3s ease-in 0.1s;
+}
+
+@keyframes scaleHeart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: showSparks 0.2s ease 0.2s forwards;
+}
+
+@keyframes fillCore {
+  to {
+    fill: #ff0000;
+  }
+}
+
+@keyframes fillMainBody {
+  to {
+    fill: #ff0000;
+  }
+}
+
+@keyframes fillContour {
+  to {
+    fill: #ff0000;
+  }
+}
+
+@keyframes showSparks {
+  to {
+    opacity: 1;
+  }
+}
