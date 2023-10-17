@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    /*переменные для светлой темы*/
+    --repeating-linear-gradient-color: #d3d3d3;
+    --linear-gradient1:#e7e7e7;
+    --linear-gradient2:#1a1a1a;
+    --border-color:#000;
+    --background-color:#fff;
+    --text-color:#000;
+    --outline-color:#fff;
+    --text-stroke-color:rgba(255, 255, 255, 0.7);
+    --card-button-text-color:#fff;
+    --shadow-color:#000;
+    --modal-background-color:rgba(0, 0, 0, 0.6);
+
+    
+    /*переменные для темной темы*/
+    --repeating-linear-gradient-color: #d3d3d3;
+    --linear-gradient1:#e7e7e7;
+    --linear-gradient2:#1a1a1a;
+    --border-color:#000;
+    --background-color:#fff;
+    --text-color:#000;
+    --outline-color:#fff;
+    --text-stroke-color:rgba(255, 255, 255, 0.7);
+    --card-button-text-color:#fff;
+    --shadow-color:#000;
+    --modal-background-color:rgba(0, 0, 0, 0.6);
+}

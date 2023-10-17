@@ -91,7 +91,7 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: showSparks 0.2s ease 0.2s forwards;
+  animation: showSparks 0.2s ease 0.2s ;
 }
 
 @keyframes fillCore {
