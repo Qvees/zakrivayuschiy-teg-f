@@ -30,47 +30,55 @@
 }
 
 .core {
-  fill: #fff; /* Начальный цвет сердцевины */
+  fill: var(--heart-color-core,#fff); /* Начальный цвет сердцевины */
   transition: fill 0.2s linear 0.1s; /* Анимация изменения fill с задержкой 0.3s при наведении */
 }
 
 .main-body {
-  fill: #fff;
+  fill: var( --heart-color-main-body);
   transition: fill 0.3s linear 0.1s; /* Анимация изменения fill с задержкой 0.33s при наведении */
 }
 
+.contour{
+  fill:var( --heart-color-contour,#000)
+}
+
+.sparks{
+  fill:var(--main-heart-color,red);
+}
+
 .heart-button:hover .core {
-  fill: #000; /* Новый цвет сердцевины при наведении */
+  fill: var(--heart-color-core-hover,#000); /* Новый цвет сердцевины при наведении */
   transition-delay: 0.1s; /* Задержка для анимации при уходе курсора */
 }
 
 .heart-button:hover .main-body {
-  fill: #000; /* Новый цвет основного тела при наведении */
+  fill: var(--heart-color-main-body-hover,#000); /* Новый цвет основного тела при наведении */
   transition-delay: 0.2s;
 }
 
 .heart-button:active .core {
-  fill: #ff0000; /* Новый цвет сердцевины при наведении */
+  fill: var(--heart-color-core-active,#ff0000); /* Новый цвет сердцевины при наведении */
   transition-delay: 0.1s;
 }
 
 .heart-button:active .main-body {
-  fill: #ff0000; /* Новый цвет основного тела при наведении */
+  fill: var( --heart-color-main-body-active,#ff0000); /* Новый цвет основного тела при наведении */
   transition-delay: 0.1s;
 }
 /*анимация по клику на сердце*/
 .like-icon.is-liked .core {
-  fill: #ff0000;
+  fill: var(--main-heart-color,#ff0000);
   animation: fillCore 0.8s ease 0.3s forwards;
 }
 
 .like-icon.is-liked .main-body {
-  fill: #ff0000;
+  fill: var(--main-heart-color,#ff0000);
   animation: fillMainBody 0.8s ease 0.3s forwards;
 }
 
 .like-icon.is-liked .contour {
-  fill: #ff0000;
+  fill: var(--main-heart-color,#ff0000);
   animation: fillContour 0.8s ease 0.3s forwards;
 }
 
@@ -96,19 +104,19 @@
 
 @keyframes fillCore {
   to {
-    fill: #ff0000;
+    fill: var(--main-heart-color,#ff0000);
   }
 }
 
 @keyframes fillMainBody {
   to {
-    fill: #ff0000;
+    fill: var(--main-heart-color,#ff0000);
   }
 }
 
 @keyframes fillContour {
   to {
-    fill: #ff0000;
+    fill: var(--main-heart-color,#ff0000);
   }
 }
 

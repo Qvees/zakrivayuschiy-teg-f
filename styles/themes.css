@@ -4,3 +4,118 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark{
+    --repeating-linear-gradient-color: #000;
+    --linear-gradient1:#007f0c;
+    --linear-gradient2:#004306;
+    --border-color: #00CC14;
+    --background-color:#000;
+    --background-color-button-before:#00cc14;
+    --text-color:#00CC14;
+    --hover-button-text-color:#fff;
+    --outline-color:#fff;
+    --text-stroke-color:rgba(255, 255, 255, 0.7);
+    --card-button-text-color:#00CC14;
+    --shadow-color:#00CC14;
+    --modal-background-color:rgba(0, 0, 0, 0.6);
+
+    --main-heart-color:#00cc14;
+    --heart-color-core:#000;
+    --heart-color-core-hover:#00cc14;
+    --heart-color-core-active:#00cc14;
+    --heart-color-main-body:#000;
+    --heart-color-main-body-hover:#00cc14;
+    --heart-color-main-body-active:#00cc14;
+    --heart-color-contour:#00cc14;
+    --heart-color-sparks:#00cc14;
+    --border-color-focus-heart:#00cc14;
+
+}
+
+:root.theme-light{
+    --repeating-linear-gradient-color: #d3d3d3;
+    --linear-gradient1:#e7e7e7;
+    --linear-gradient2:#1a1a1a;
+    --border-color:#000;
+    --background-color:#fff;
+    --background-color-button-before:#fff;
+    --text-color:#000;
+    --hover-button-text-color:#fff;
+    --outline-color:#fff;
+    --text-stroke-color:rgba(255, 255, 255, 0.7);
+    --card-button-text-color:#fff;
+    --shadow-color:#000;
+    --modal-background-color:rgba(0, 0, 0, 0.6);
+    --main-heart-color:#ff0000;
+    --heart-color-core:#fff;
+    --heart-color-core-hover:#000;
+    --heart-color-core-active:#ff0000;
+    --heart-color-main-body:#fff;
+    --heart-color-main-body-hover:#000;
+    --heart-color-main-body-active:#ff0000;
+    --heart-color-contour:#000;
+    --heart-color-sparks:#ff0000;
+    --border-color-focus-heart:#000;
+}
+
+
+@media screen and (prefers-color-scheme: light){
+:root{
+    --repeating-linear-gradient-color: #d3d3d3;
+    --linear-gradient1:#e7e7e7;
+    --linear-gradient2:#1a1a1a;
+    --border-color:#000;
+    --background-color:#fff;
+    --background-color-button-before:#fff;
+    --text-color:#000;
+    --hover-button-text-color:#fff;
+    --outline-color:#fff;
+    --text-stroke-color:rgba(255, 255, 255, 0.7);
+    --card-button-text-color:#fff;
+    --shadow-color:#000;
+    --modal-background-color:rgba(0, 0, 0, 0.6);
+    --main-heart-color:#ff0000;
+    --heart-color-core:#fff;
+    --heart-color-core-hover:#000;
+    --heart-color-core-active:#ff0000;
+    --heart-color-main-body:#fff;
+    --heart-color-main-body-hover:#000;
+    --heart-color-main-body-active:#ff0000;
+    --heart-color-contour:#000;
+    --heart-color-sparks:#ff0000;
+    --border-color-focus-heart:#000
+};
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+    :root{
+        --repeating-linear-gradient-color: #000;
+        --linear-gradient1:#007f0c;
+        --linear-gradient2:#004306;
+        --border-color: #00CC14;
+        --background-color:#000;
+        --background-color-button-before:#00cc14;
+        --text-color:#00CC14;
+        --hover-button-text-color:#000;
+        --outline-color:#fff;
+        --text-stroke-color:rgba(255, 255, 255, 0.7);
+        --card-button-text-color:#00CC14;
+        --shadow-color:#00CC14;
+        --modal-background-color:rgba(0, 0, 0, 0.6);
+    
+        --main-heart-color:#00cc14;
+        --heart-color-core:#000;
+        --heart-color-core-hover:#00cc14;
+        --heart-color-core-active:#00cc14;
+        --heart-color-main-body:#000;
+        --heart-color-main-body-hover:#00cc14;
+        --heart-color-main-body-active:#00cc14;
+        --heart-color-contour:#00cc14;
+        --heart-color-sparks:#00cc14;
+        --border-color-focus-heart:#00cc14;
+    }
+    
+}
