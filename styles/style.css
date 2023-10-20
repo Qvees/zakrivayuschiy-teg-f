@@ -39,6 +39,7 @@
       var(--linear-gradient2, #1a1a1a)
     );
   background-size: cover;
+  font-family: var(--main-font), sans-serif;
 }
 
 .header {

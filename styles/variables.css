@@ -26,6 +26,8 @@
   --border-color-focus-heart: #000;
   --text-weigh7: 700;
   --text-weight4: 400;
+  --main-font: 'Inter', sans-serif; /* Основной шрифт Inter */
+  --accent-font: 'PressStart2P', monospace; /* Акцентный шрифт PressStart2P */
 
 
 

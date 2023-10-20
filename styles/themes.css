@@ -31,6 +31,8 @@
   --border-color-focus-heart: #000;
   --text-weight7: 700;
   --text-weight4: 400;
+  --main-font: 'Inter', sans-serif; /* Основной шрифт Inter */
+  --accent-font: 'PressStart2P', monospace; /* Акцентный шрифт PressStart2P */
 }
 
 :root.theme-dark {
@@ -59,6 +61,8 @@
   --border-color-focus-heart: #00cc14;
   --text-weight7: 785;
   --text-weight4: 465;
+  --main-font: 'Inter', sans-serif; /* Основной шрифт Inter */
+  --accent-font: 'PressStart2P', monospace; /* Акцентный шрифт PressStart2P */
 }
 
 @media screen and (prefers-color-scheme: light) {
