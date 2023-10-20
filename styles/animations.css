@@ -25,9 +25,6 @@
 }
 
 /*анимация сердца*/
-.sparks {
-  opacity: 0;
-}
 
 .core {
   fill: var(--heart-color-core, #fff); /* Начальный цвет сердцевины */
@@ -44,6 +41,7 @@
 }
 
 .sparks {
+  opacity: 0;
   fill: var(--main-heart-color, red);
 }
 

@@ -402,6 +402,10 @@
 #diskette rect {
   fill: var(--text-color, #000);
 }
+
+#diskette2 rect {
+  fill: var(--text-color, #000);
+}
 .diskette-footer {
   margin-left: 5px;
 }
