@@ -39,7 +39,6 @@
       var(--linear-gradient2, #1a1a1a)
     );
   background-size: cover;
-  font-family: var(--main-font), sans-serif;
 }
 
 .header {
@@ -50,11 +49,16 @@
 
 .header-container {
   width: 696px;
-  height: 364px;
-  border: 2px solid var(--border-color, #000);
+  outline: 2px solid var(--border-color, #000);
   background-color: var(--background-color, #fff);
   text-align: center;
   margin-top: 102px;
+}
+
+@media screen and (max-width: 375px) {
+  .header-container {
+    width: 371px;
+  }
 }
 
 .header-logo {
@@ -66,7 +70,7 @@
 }
 
 .header-title {
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 65px;
   font-style: normal;
   font-weight: 400;
@@ -82,7 +86,7 @@
 }
 
 .header-text {
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -101,6 +105,7 @@
   justify-content: center;
   gap: 14px;
   padding-top: 22px;
+  margin-bottom: 22px;
 }
 
 .theme-menu__button {
@@ -108,7 +113,7 @@
   padding-left: 20px;
   border: none;
   background-color: transparent;
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -197,29 +202,41 @@
   margin-top: 103px;
 }
 .card {
+  display: grid;
+  grid-template-columns: 696px;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--border-color, #000);
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 375px) {
+  .card {
+    grid-template-columns: 375px;
+  }
+}
 .card-title {
+  display: grid;
   color: var(--text-color, #000);
-  font-family: 'Inter-Variable', Arial, sans-serif;
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: var(--text-weight7);
   line-height: normal;
-  margin: 5px 10px;
+  height: 33px;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .image-container {
   position: relative;
-  border-bottom: 2px solid var(--border-color, #000);
-  height: 698px;
+  outline: 2px solid var(--border-color, #000);
+  height: 696px;
+  width: 696px;
 }
 
 .card-image {
-  width: 696px;
-  height: 696px;
+  max-width: 100%;
 }
 
 .image2 {
@@ -252,9 +269,19 @@
 
 .card-text-container {
   display: grid;
+  grid-template-columns: 646px;
+  margin: 27px 0 0 25px;
   gap: 27px;
-  margin: 26px 25px 0 25px;
-  width: 646px;
+}
+
+.card-text {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: var(--text-weight4);
+  line-height: 21px;
+  word-wrap: break-word;
 }
 
 .image-text {
@@ -263,8 +290,8 @@
   right: 14px;
   background-color: transparent;
   padding: 5px 10px;
-  color: var(--text-color, #000);
-  font-family: 'PressStart';
+  color: var(--text-color-image-text, #000);
+  font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
   font-weight: var(--text-weight4);
@@ -289,15 +316,6 @@
   .image-text {
     mix-blend-mode: hard-light;
   }
-}
-
-.card-text {
-  color: var(--text-color, #000);
-  font-family: 'Inter-Variable', Arial, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: var(--text-weight4);
-  line-height: 21px; /* 116.667% */
 }
 
 .buttons-card-container {
@@ -347,7 +365,7 @@
   display: block;
   color: var(--card-button-text-color, #fff);
   padding: 5px 10px;
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
   font-weight: var(--text-weight4);
@@ -391,6 +409,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  color: var(--text-color);
   width: 338px;
   height: 54px;
   background-color: var(--background-color, #fff);
@@ -400,13 +419,6 @@
   transition: color 0.5s ease-in-out;
 }
 
-#diskette rect {
-  fill: var(--text-color, #000);
-}
-
-#diskette2 rect {
-  fill: var(--text-color, #000);
-}
 .diskette-footer {
   margin-left: 5px;
 }
@@ -418,7 +430,7 @@
   color: var(--card-button-text-color, #fff);
   display: block;
   margin-right: 28px;
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
   font-weight: var(--text-weight4);
@@ -441,7 +453,7 @@
 }
 
 .footer-button:hover .button__text {
-  color: var(--card-button-text-color, #fff);
+  color: var(--card-button-text-color), #fff;
 }
 
 .footer-button:hover::before {
@@ -463,6 +475,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  color: var(--text-color);
 }
 
 .diskette-text-container {
@@ -480,7 +493,7 @@
   color: var(--text-color, #000);
   border: 2px solid var(--border-color, #000);
   grid-column: 1/3;
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   background-color: transparent;
   font-size: 14px;
   font-style: normal;
@@ -493,7 +506,7 @@
 
 .modal-text {
   color: var(--text-color, #000);
-  font-family: 'PressStart';
+  font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
   font-weight: var(--text-weight4);

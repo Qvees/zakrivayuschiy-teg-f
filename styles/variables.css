@@ -8,6 +8,7 @@
   --background-color: #fff;
   --background-color-button-before: #fff;
   --text-color: #000;
+  --text-color-image-text:#000;
   --hover-button-text-color: #fff;
   --outline-color: #fff;
   --text-stroke-color: rgba(255, 255, 255, 0.7);
@@ -26,9 +27,8 @@
   --border-color-focus-heart: #000;
   --text-weigh7: 700;
   --text-weight4: 400;
-  --main-font: 'Inter', sans-serif; /* Основной шрифт Inter */
-  --accent-font: 'PressStart2P', monospace; /* Акцентный шрифт PressStart2P */
-
+  --main-font: 'Inter-Variable', sans-serif; /* Основной шрифт Inter */
+  --fantasy-font: 'PressStart', fantasy; /*  шрифт PressStart2P */
 
 
   /*переменные для темной темы*/
@@ -39,9 +39,10 @@
   --background-color: #000;
   --background-color-button-before: #00cc14;
   --text-color: #00cc14;
+  --text-color-image-text:#000;
   --hover-button-text-color: #000;
   --outline-color: #fff;
-  --text-stroke-color: rgba(255, 255, 255, 0.7);
+  --text-stroke-color: #00cc14;
   --card-button-text-color: #00cc14;
   --shadow-color: #00cc14;
   --modal-background-color: rgba(0, 0, 0, 0.6);
