@@ -47,17 +47,21 @@
   margin: 0;
 }
 
+
+
 .header-container {
-  width: 696px;
+  width: 43.5em;
   outline: 2px solid var(--border-color, #000);
   background-color: var(--background-color, #fff);
   text-align: center;
-  margin-top: 102px;
+  margin-top: 6.375em;
+  height: 22.75em;
 }
 
 @media screen and (max-width: 375px) {
   .header-container {
-    width: 371px;
+    width: 23.188em;
+    height: 324px;
   }
 }
 
@@ -76,12 +80,13 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  margin-top: 136px;
+  margin-top: 2.1em;
 }
 
 @media screen and (max-width: 375px) {
   .header-title {
     font-size: 49px;
+    margin-top: 120px;
   }
 }
 
@@ -103,14 +108,14 @@
 .theme-menu__list {
   display: grid;
   justify-content: center;
-  gap: 14px;
-  padding-top: 22px;
-  margin-bottom: 22px;
+  gap: 0.8em;
+  padding-top: 1.375em;
+  margin-bottom: 1.563em;
 }
 
 .theme-menu__button {
   display: flex;
-  padding-left: 20px;
+  padding: 0.11em 0 0 1.25em;
   border: none;
   background-color: transparent;
   font-family: var(--fantasy-font);
@@ -142,18 +147,15 @@
 }
 
 .theme-menu__button[data-theme='auto']::before {
-  left: 5px;
-  top: 1px;
+  left: 2px;
 }
 
 .theme-menu__button[data-theme='dark']::before {
-  left: 5px;
-  top: 1px;
+  left: 2px;
 }
 
 .theme-menu__button[data-theme='light']::before {
-  left: 5px;
-  top: 1px;
+  left: 2px;
 }
 
 .theme-menu__button:hover {
@@ -199,44 +201,92 @@
 
 .main-container {
   display: grid;
-  margin-top: 103px;
+  max-width: 44em;
+  margin-top: 6.438em;
 }
+
+@media screen and (max-width:375px) {
+
+  .main-container{
+    width: 23.438em;
+    margin-top: 6.3em;
+  }
+  
+}
+
 .card {
   display: grid;
-  grid-template-columns: 696px;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--border-color, #000);
-  margin-bottom: 50px;
+  margin-bottom: 3.125em;
+  width: 100%;
 }
 
 @media screen and (max-width: 375px) {
   .card {
     grid-template-columns: 375px;
+    width: 375px;
   }
 }
-.card-title {
+
+.card-title-container{
   display: grid;
+  align-items: center;
+  width: 100%;
+  height: 2.05em;
+
+
+}
+
+.card-title {
   color: var(--text-color, #000);
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: var(--text-weight7);
   line-height: normal;
-  height: 33px;
-  justify-content: start;
-  align-items: center;
-  padding-left: 10px;
+  padding: 0 0 2px 10px;
+}
+
+@media screen and (max-width:375px) {
+
+  .card-title-container1{
+    height: 3.4em;
+  }
+ 
+  .card-title1{
+  width: 365px;
+  padding-top: 5px;
+
+  }
+
+  
 }
 
 .image-container {
   position: relative;
   outline: 2px solid var(--border-color, #000);
-  height: 696px;
-  width: 696px;
+  height: 43.5em;
+  max-width: 43.5em;
 }
 
 .card-image {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width:375px) {
+
+  .image-container{
+    width: 23.188em;
+    height: 23.188em;
+
+  }
+  .card-image{
+    width: 23.188em;
+    height: 23.188em;
+  }
+  
 }
 
 .image2 {
@@ -269,10 +319,11 @@
 
 .card-text-container {
   display: grid;
-  grid-template-columns: 646px;
-  margin: 27px 0 0 25px;
-  gap: 27px;
+  max-width: 40.375em;
+  margin: 1.688em 0 0 1.563em;
+  gap:1.688em;
 }
+
 
 .card-text {
   color: var(--text-color);
@@ -281,7 +332,22 @@
   font-style: normal;
   font-weight: var(--text-weight4);
   line-height: 21px;
-  word-wrap: break-word;
+}
+
+@media screen and (max-width:375px) {
+
+  .card-text-container{
+    max-width: 20em;
+  }
+  .card-text-container7{
+
+    max-width: 19.8em;
+  }
+  .card-text{
+    width: 100%;
+    text-wrap: wrap;
+  }
+
 }
 
 .image-text {
@@ -297,6 +363,22 @@
   font-weight: var(--text-weight4);
   line-height: normal;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:375px){
+
+  .image-text{
+    right: 1px;
+    top:18px;
+  }
+  .span-position-card7{
+    right:15px;
+    top: 19px;
+  }
+  
+  .span-position-card5{
+    top: 20px;
+  }
 }
 
 @supports (
@@ -321,7 +403,7 @@
 .buttons-card-container {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 8px;
+  gap: 7px;
   justify-content: end;
   align-items: center;
 }
@@ -332,8 +414,8 @@
   justify-content: center;
   background-color: transparent;
   border: none;
-  width: 37px;
-  height: 34px;
+  width: 2.313em;
+  height: 2.125em;
   cursor: pointer;
 }
 
@@ -349,13 +431,21 @@
 .card-button {
   position: relative;
   overflow: hidden;
-  width: 130px;
-  height: 38px;
+  width: 8.125em;
+  height: 2.375em;
   background-color: transparent;
   border: 2px solid var(--border-color, #000);
-  margin: 25px 25px 25px 0;
+  margin: 1.563em 1.563em 1.563em 0;
   cursor: pointer;
   transition: background-color 0.5s ease-in-out;
+}
+
+@media screen and (max-width:375px) {
+
+  .card-button{
+  margin: 1.563em 1.8em 1.563em 0;
+  }
+  
 }
 
 .button__text {
@@ -364,7 +454,7 @@
   z-index: 1;
   display: block;
   color: var(--card-button-text-color, #fff);
-  padding: 5px 10px;
+  padding: 0.313em 0.625em;
   font-family: var(--fantasy-font);
   font-size: 14px;
   font-style: normal;
@@ -419,6 +509,25 @@
   transition: color 0.5s ease-in-out;
 }
 
+@media screen and (max-width:375px) {
+
+  .footer-button{
+    gap: 0px;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 85px;
+  }
+
+  .diskette-button{
+    width: 28px;
+    height: 28px;
+    margin: 15px 0 0 120px;
+  }
+}
+
 .diskette-footer {
   margin-left: 5px;
 }
@@ -437,6 +546,15 @@
   line-height: normal;
   white-space: nowrap;
   transition: color 0.5s ease-in-out;
+}
+
+@media screen and (max-width:375px) {
+
+  .footer-button-text{
+    margin-right: 24px;
+    margin-bottom: 5px;
+  }
+  
 }
 
 .footer-button::before {
@@ -465,6 +583,15 @@
   height: 173px;
   border: 2px solid var(--border-color, #000);
   background-color: var(--background-color, #fff);
+}
+
+@media screen and (max-width:375px) {
+
+  #dialog-id{
+    height: 195px;
+    width: 341px;
+  }
+  
 }
 
 #dialog-id[open]::backdrop {
@@ -513,4 +640,14 @@
   line-height: 150%; /* 21px */
   text-transform: uppercase;
   text-align: left;
+}
+
+@media screen and (max-width:375px) {
+
+ .diskette-text-container{
+
+  grid-template-columns: 40px 200px;
+  margin-left: 42px;
+ }
+  
 }

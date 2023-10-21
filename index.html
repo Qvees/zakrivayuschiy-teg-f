@@ -61,9 +61,11 @@
     </header>
     <main class="main-container">
       <div class="card">
-        <h2 class="card-title">
+        <div class="card-title-container card-title-container1">
+        <h2 class="card-title card-title1">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
+      </div>
         <div class="image-container">
           <img class="card-image image1" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text">&lt;/html&gt;</span>
@@ -118,7 +120,9 @@
       </div>
       </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">1 спринт: Я — чистый лист</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image2" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text">&lt;/html&gt;</span>
@@ -175,7 +179,9 @@
         </div>
         </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">1 спринт: А если не получится?</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image3" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text">&lt;css&gt;</span>
@@ -230,7 +236,9 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image4" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text span-lowercase">&lt;desigions&gt;</span>
@@ -287,10 +295,12 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image5" src="./images/image.png" alt="Пиксельное изображение фургона" />
-          <span class="image-text span-lowercase">care</span>
+          <span class="image-text span-lowercase span-position-card5">care</span>
         </div>
         <div class="card-text-container">
           <p class="card-text">
@@ -345,7 +355,9 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">3 спринт: Обходные стратегии</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image6" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text span-lowercase">&lt;support&gt;</span>
@@ -400,15 +412,17 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-title-container">
         <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image7" src="./images/image.png" alt="Пиксельное изображение фургона" />
-          <span class="image-text span-lowercase"
-            >&lt;/lifes-style: none&gt;</span
+          <span class="image-text span-lowercase span-position-card7"
+            >&lt;lifes-style: none&gt;</span
           >
         </div>
-        <div class="card-text-container">
-          <p class="card-text">
+        <div class="card-text-container card-text-container7">
+          <p class="card-text card-text">
             Во время учёбы часто возникает чувство, когда не знаешь, за что
             хвататься. Вроде и проектную пора сдавать, и задачи хочется
             порешать, и в теории получше разобраться, и жизнь не забыть пожить.
@@ -459,7 +473,9 @@
         </div>
       </div>
       <div class="card">
-        <h2 class="card-title">«Сейчас я здесь»</h2>
+        <div class="card-title-container">
+          <h2 class="card-title">«Сейчас я здесь»</h2>
+        </div>
         <div class="image-container">
           <img class="card-image image8" src="./images/image.png" alt="Пиксельное изображение фургона" />
           <span class="image-text span-lowercase">&lt;/experience&gt;</span>
@@ -522,12 +538,11 @@
       <dialog id="dialog-id">
         <div class="modal-content">
           <div class="diskette-text-container">
-            <svg width="40" height="40" viewBox="0 0 40 40">
+            <svg class="diskette-modal" width="40" height="40" viewBox="0 0 40 40">
               <use href="./main.svg#diskette-modal">
           </svg>
             <h2 class="modal-text">
-              Вставьте <br />
-              дискету, чтобы <br />продолжить
+              Вставьте дискету, чтобы продолжить
             </h2>
           </div>
           <button class="cancel-button" onclick="window['dialog-id'].close()">
@@ -540,7 +555,7 @@
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
         class="footer-button">
-          <svg xmlns="http://www.w3.org/2000/svg"  width="21" height="21" viewBox="0 0 21 21" fill="none">
+          <svg class="diskette-button" xmlns="http://www.w3.org/2000/svg"  width="21" height="21" viewBox="0 0 21 21" fill="none">
             <use href="./main.svg#diskette-button">  
           </svg>
         <span class="footer-button-text">Сохранить на память</span>
