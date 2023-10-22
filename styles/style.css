@@ -49,14 +49,6 @@
   background-attachment: fixed;
 }
 
-@media screen and (max-width:375px) {
-
-  .page{
-    grid-template-columns: 370px;
-  }
-  
-}
-
 .header {
   display: flex;
   justify-content: center;
