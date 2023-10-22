@@ -1,20 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /*переменные для светлой темы*/
-  --repeating-linear-gradient-color: #d3d3d3;
-  --linear-gradient1: #e7e7e7;
-  --linear-gradient2: #1a1a1a;
   --border-color: #000;
   --background-color: #fff;
   --background-color-button-before: #fff;
   --text-color: #000;
-  --text-color-image-text:#000;
+  --text-color-image-text: #000;
   --hover-button-text-color: #fff;
   --outline-color: #fff;
   --text-stroke-color: rgba(255, 255, 255, 0.7);
   --card-button-text-color: #fff;
   --shadow-color: #000;
-  --modal-background-color: rgba(0, 0, 0, 0.6);
+  --modal-background-color: #000;
   --main-heart-color: #ff0000;
   --heart-color-core: #fff;
   --heart-color-core-hover: #000;
@@ -30,7 +27,6 @@
   --main-font: 'Inter-Variable', sans-serif; /* Основной шрифт Inter */
   --fantasy-font: 'PressStart', fantasy; /*  шрифт PressStart2P */
 
-
   /*переменные для темной темы*/
   --repeating-linear-gradient-color: #000;
   --linear-gradient1: #007f0c;
@@ -39,13 +35,13 @@
   --background-color: #000;
   --background-color-button-before: #00cc14;
   --text-color: #00cc14;
-  --text-color-image-text:#000;
+  --text-color-image-text: #000;
   --hover-button-text-color: #000;
   --outline-color: #fff;
   --text-stroke-color: #00cc14;
   --card-button-text-color: #00cc14;
   --shadow-color: #00cc14;
-  --modal-background-color: rgba(0, 0, 0, 0.6);
+  --modal-background-color: #000;
   --main-heart-color: #00cc14;
   --heart-color-core: #000;
   --heart-color-core-hover: #00cc14;
