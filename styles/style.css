@@ -20,12 +20,16 @@
  Быывает он опять появляется но если перезагружу страницу исчезает. Размеры всех элементов не больше 375px. Не понимаю из за чего скролл 
  Даже если удалить блоки header и main  все равно остается скролл*/
 
-.page {
+*{
+  box-sizing: border-box;
+}
+ 
+ .page {
   display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
+  grid-template-columns: repeat(1, minmax(375px, clamp(375px, 100%, 100vw)));
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  place-items: center;
   /* Градиент с повторяющимися полосками слева направо */
   background-image: repeating-linear-gradient(
       var(--repeating-linear-gradient-color, #d3d3d3),
@@ -47,16 +51,18 @@
     );
   background-size: cover;
   background-attachment: fixed;
+  
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  margin: 0;
+  display: grid;
+  place-items: center;
+  max-width: 700px;
+  width: 100%;
 }
 
 .header-container {
-  width: 43.5em;
+  width: 100%;
   outline: 2px solid var(--border-color, #000);
   background-color: var(--background-color, #fff);
   text-align: center;
@@ -73,43 +79,45 @@
 
 .header-logo {
   display: grid;
+  width: 100%;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color, #000);
+  margin-top: 136px;
+
 }
 
 .header-title {
-  font-family: var(--fantasy-font);
-  font-size: 65px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: uppercase;
-  margin-top: 2.1em;
-}
-
-@media screen and (max-width: 375px) {
-  .header-title {
-    font-size: 49px;
-    margin-top: 120px;
-  }
+color: var(--text-color, #000);
+font-family: var(--fantasy-font);
+font-size: calc(49px + 16 * (100vw / 1440));
+font-style: normal;
+font-weight: var(--text-weight4);
+line-height: normal;
+text-transform: uppercase;
 }
 
 .header-text {
+  color: var(--themes-main-color, #000);
   font-family: var(--fantasy-font);
-  font-size: 23px;
+  font-size: calc(14px + 9 * (100vw / 1440));
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--text-weight4);
   line-height: normal;
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 375px) {
-  .header-text {
-    font-size: 14px;
+
+@media screen and (max-width:700px ) {
+
+  .header-title{
+    font-size: calc(49px + (16 + 16 * 0.7) * ((100vw - 375px) / 1440)); 
   }
+
+  .header-text{
+    font-size: calc(14px + (9 + 9 * 0.7) * ((100vw - 375px) / 1440)); 
 }
+}
+
+
 
 .theme-menu__list {
   display: grid;
@@ -209,13 +217,14 @@
 
 .main-container {
   display: grid;
-  max-width: 44em;
+  max-width: 696px;
   margin-top: 6.438em;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 375px) {
   .main-container {
-    width: 23.438em;
+    max-width: 375px;
     margin-top: 6.3em;
   }
 }
@@ -225,7 +234,9 @@
   background-color: var(--background-color, #fff);
   border: 2px solid var(--border-color, #000);
   margin-bottom: 3.125em;
-  width: 100%;
+  width:100%;
+  max-width: 696px;
+  min-height: 959px;
 }
 
 @media screen and (max-width: 375px) {
@@ -238,8 +249,9 @@
 .card-title-container {
   display: grid;
   align-items: center;
+  min-height: 31px;
   width: 100%;
-  height: 2.05em;
+  align-content: flex-start;
 }
 
 .card-title {
@@ -249,7 +261,7 @@
   font-style: normal;
   font-weight: var(--text-weight7);
   line-height: normal;
-  padding: 0 0 2px 10px;
+  padding: 4px 0 2px 8px;
   font-variation-settings: 'wght' 785;
 }
 
@@ -266,15 +278,16 @@
 
 .image-container {
   position: relative;
-  outline: 2px solid var(--border-color, #000);
-  height: 43.5em;
-  max-width: 43.5em;
-  
+  max-width: 696px;
+  min-height: 700px;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .card-image {
-  width: 100%;
-  height: 100%;
+  width:100%;
+  max-width: 694px;
+  height: 100%;;
 }
 
 @media screen and (max-width: 375px) {
@@ -318,9 +331,8 @@
 
 .card-text-container {
   display: grid;
-  max-width: 40.375em;
-  margin: 1.688em 0 0 1.563em;
-  gap: 1.688em;
+  padding: 25px 25px 0 23px;
+    gap: 27px;
 }
 
 .card-text {
@@ -399,12 +411,13 @@
 }
 
 .buttons-card-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 7px;
+  display: flex; 
   justify-content: end;
   align-items: center;
+  padding: 25px 25px 25px 25px;
+  gap: 7px; 
 }
+
 
 .heart-button {
   position: relative;
@@ -433,7 +446,6 @@
   height: 2.375em;
   background-color: transparent;
   border: 2px solid var(--border-color, #000);
-  margin: 1.563em 1.563em 1.563em 0;
   cursor: pointer;
   transition: background-color 0.5s ease-in-out;
 }
