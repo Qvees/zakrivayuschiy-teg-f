@@ -20,11 +20,11 @@
  Быывает он опять появляется но если перезагружу страницу исчезает. Размеры всех элементов не больше 375px. Не понимаю из за чего скролл 
  Даже если удалить блоки header и main  все равно остается скролл*/
 
-*{
+* {
   box-sizing: border-box;
 }
- 
- .page {
+
+.page {
   display: grid;
   grid-template-columns: repeat(1, minmax(375px, clamp(375px, 100%, 100vw)));
   min-inline-size: 320px;
@@ -51,7 +51,6 @@
     );
   background-size: cover;
   background-attachment: fixed;
-  
 }
 
 .header {
@@ -82,42 +81,43 @@
   width: 100%;
   gap: 20px;
   margin-top: 136px;
+}
 
+@media screen and (max-width: 375px) {
+  .header-logo {
+    margin-top: 120px;
+  }
 }
 
 .header-title {
-color: var(--text-color, #000);
-font-family: var(--fantasy-font);
-font-size: calc(49px + 16 * (100vw / 1440));
-font-style: normal;
-font-weight: var(--text-weight4);
-line-height: normal;
-text-transform: uppercase;
-}
-
-.header-text {
-  color: var(--themes-main-color, #000);
+  color: var(--text-color, #000);
   font-family: var(--fantasy-font);
-  font-size: calc(14px + 9 * (100vw / 1440));
+  font-size: clamp(49px, 5.2083vw, 65px);
   font-style: normal;
   font-weight: var(--text-weight4);
   line-height: normal;
   text-transform: uppercase;
 }
 
+.header-text {
+  color: var(--themes-main-color, #000);
+  font-family: var(--fantasy-font);
+  font-size: clamp(14px, 3.125vw, 23px);
+  font-style: normal;
+  font-weight: var(--text-weight4);
+  line-height: normal;
+  text-transform: uppercase;
+}
 
-@media screen and (max-width:700px ) {
-
-  .header-title{
-    font-size: calc(49px + (16 + 16 * 0.7) * ((100vw - 375px) / 1440)); 
+@media screen and (max-width: 700px) {
+  .header-title {
+    font-size: calc(49px + (16 + 16 * 0.7) * ((100vw - 375px) / 1440));
   }
 
-  .header-text{
-    font-size: calc(14px + (9 + 9 * 0.7) * ((100vw - 375px) / 1440)); 
+  .header-text {
+    font-size: calc(14px + (9 + 9 * 0.7) * ((100vw - 375px) / 1440));
+  }
 }
-}
-
-
 
 .theme-menu__list {
   display: grid;
@@ -217,7 +217,7 @@ text-transform: uppercase;
 
 .main-container {
   display: grid;
-  max-width: 696px;
+  max-width: 700px;
   margin-top: 6.438em;
   flex-shrink: 0;
 }
@@ -230,24 +230,24 @@ text-transform: uppercase;
 }
 
 .card {
-  display: grid;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--border-color, #000);
   margin-bottom: 3.125em;
-  width:100%;
-  max-width: 696px;
-  min-height: 959px;
+  width: 100%;
+  max-width: 700px;
 }
 
 @media screen and (max-width: 375px) {
   .card {
     grid-template-columns: 375px;
     width: 375px;
+    height: auto;
   }
 }
 
 .card-title-container {
   display: grid;
+  grid-template-rows: auto;
   align-items: center;
   min-height: 31px;
   width: 100%;
@@ -266,39 +266,37 @@ text-transform: uppercase;
 }
 
 @media screen and (max-width: 375px) {
-  .card-title-container1 {
-    height: 3.4em;
-  }
-
-  .card-title1 {
-    width: 365px;
-    padding-top: 5px;
+  .card-title {
+    max-width: 351px;
   }
 }
 
 .image-container {
+  display: block;
   position: relative;
   max-width: 696px;
-  min-height: 700px;
+  height: 700px;
   border-top: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
 }
 
-.card-image {
-  width:100%;
-  max-width: 694px;
-  height: 100%;;
+@media screen and (max-width: 1439px) {
+  .image-container {
+    max-height: calc(376px + (700 - 376) * (100vw - 375px) / (1440 - 375));
+  }
 }
 
 @media screen and (max-width: 375px) {
   .image-container {
-    width: 23.188em;
-    height: 23.188em;
+    width: 371px;
+    height: 375.5px;
   }
-  .card-image {
-    width: 23.188em;
-    height: 23.188em;
-  }
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .image2 {
@@ -332,7 +330,7 @@ text-transform: uppercase;
 .card-text-container {
   display: grid;
   padding: 25px 25px 0 23px;
-    gap: 27px;
+  gap: 27px;
 }
 
 .card-text {
@@ -347,13 +345,14 @@ text-transform: uppercase;
 
 @media screen and (max-width: 375px) {
   .card-text-container {
-    max-width: 20em;
+    width: 321px;
+    padding: 25px 25px 0 25px;
   }
-  .card-text-container7 {
-    max-width: 19.8em;
+  .card-text7 {
+    max-width: 319px;
   }
   .card-text {
-    width: 100%;
+    width: 321px;
     text-wrap: wrap;
   }
   .card-text-card8 {
@@ -411,13 +410,21 @@ text-transform: uppercase;
 }
 
 .buttons-card-container {
-  display: flex; 
+  display: flex;
   justify-content: end;
   align-items: center;
   padding: 25px 25px 25px 25px;
-  gap: 7px; 
+  gap: 7px;
 }
 
+@media screen and (max-width: 375px) {
+  .buttons-card-container {
+    display: grid;
+    grid-template-columns: 44px 140px;
+    padding: 0 15px 0 0;
+    gap: 0;
+  }
+}
 
 .heart-button {
   position: relative;
@@ -442,8 +449,8 @@ text-transform: uppercase;
 .card-button {
   position: relative;
   overflow: hidden;
-  width: 8.125em;
-  height: 2.375em;
+  width: 130px;
+  height: 38px;
   background-color: transparent;
   border: 2px solid var(--border-color, #000);
   cursor: pointer;
@@ -458,10 +465,9 @@ text-transform: uppercase;
 
 .button__text {
   position: relative;
-  mix-blend-mode: difference;
   z-index: 1;
   display: block;
-  color: var(--card-button-text-color, #fff);
+  color: var(--text-color, #fff);
   padding: 0.313em 0.625em;
   font-family: var(--fantasy-font);
   font-size: 14px;
@@ -494,8 +500,8 @@ text-transform: uppercase;
 }
 
 .card-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--shadow-color, #000); /* Добавляем тень */
-  transition: box-shadow 0.3s ease; /* Настройки плавности */
+  box-shadow: 2px 2px 0 0 var(--shadow-color, #000); 
+  transition: box-shadow 0.3s ease; 
   outline: none;
 }
 
@@ -515,6 +521,7 @@ text-transform: uppercase;
   margin: 0px 0 105px 0;
   padding-left: 30px;
   transition: color 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
@@ -525,13 +532,13 @@ text-transform: uppercase;
     justify-content: center;
     align-items: center;
     width: 310px;
-    height: 85px;
+    height: 80px;
   }
 
   .diskette-button {
     width: 28px;
     height: 28px;
-    margin: 15px 0 0 120px;
+    margin: 13px 0 0 120px;
   }
 }
 
@@ -588,9 +595,8 @@ text-transform: uppercase;
 }
 
 .footer-button:focus-visible {
-  /*по макету не понял какой тут должен быть фокус, как у кнопки like или другой. Сделал как у like */
-  box-shadow: 2px 2px 0 0 var(--shadow-color, #000); /* Добавляем тень */
-  transition: box-shadow 0.3s ease; /* Настройки плавности */
+  box-shadow: 2px 2px 0 0 var(--shadow-color, #000);
+  transition: box-shadow 0.3s ease; 
   outline: none;
 }
 
@@ -649,6 +655,14 @@ text-transform: uppercase;
   cursor: pointer;
 }
 
+@media screen and (max-width: 375px) {
+  .cancel-button {
+    width: 257px;
+    height: 38px;
+    margin-left: 35px;
+  }
+}
+
 .cancel-button::before {
   content: '';
   display: block;
@@ -675,9 +689,8 @@ text-transform: uppercase;
 }
 
 .cancel-button:focus-visible {
-  /*по макету не понял какой тут должен быть фокус, как у кнопки like или другой. Сделал как у like */
-  box-shadow: 2px 2px 0 0 var(--shadow-color, #000); /* Добавляем тень */
-  transition: box-shadow 0.3s ease; /* Настройки плавности */
+  box-shadow: 2px 2px 0 0 var(--shadow-color, #000); 
+  transition: box-shadow 0.3s ease;
   outline: none;
 }
 
@@ -694,7 +707,6 @@ text-transform: uppercase;
 
 @media screen and (max-width: 375px) {
   .diskette-text-container {
-    grid-template-columns: 40px 200px;
-    margin-left: 42px;
+    margin-left: 35px;
   }
 }
